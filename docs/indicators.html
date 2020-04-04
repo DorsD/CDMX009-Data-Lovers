@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang=es>
+  <head>
+    <meta charset="utf-8">
+    <title>Bars & Dots</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/png" />
+    <link rel="stylesheet" href="styleIndicators.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  </head>
+  <body>
+    <header class="myHeader">
+      <div class="logo">
+        <p>Bars <span>&</span> Dots</p>
+      </div>
+      <div class="socialNetworks">
+        <a href="https://www.facebook.com/"  target="_blank"><i id="facebook" class="fab fa-facebook-f fa-lg"></i></a>
+        <a href="https://twitter.com/" target= "_blank"><i id="twitter" class="fab fa-twitter fa-lg"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i id="instagram" class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://www.pinterest.com.mx/" target="_blank"><i id="pinterest" class="fab fa-pinterest-p fa-lg"></i></a>
+        <a href=""><i id ="share" class="fas fa-share-alt fa-lg"></i></a>
+      </div>
+    </header>
+    <div class="pageMiddle">
+      <input class="landing" type="button" value="Regresar" onclick="location.href='./index.html'">
+      <div>
+        <h1 id="pageTittle"></h1>
+      </div>
+    </div>  
+    
+    
+    <section id="indicatorsCards">
+    </section>
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+       <h2 id="modalHeader"> </h2>
+      </div>
+      <div class="modal-body">
+        <div>
+          <p id="modalIndicator"> </p>
+          <div class="inputContainer">
+            <input id="compare" type="button" value="Comparar">
+          </div>
+        </div>
+        <div id ="graphicModal"> 
+         <!-- <canvas id="myChart" ></canvas> -->
+        </div> 
+      </div>
+      <div class="modal-footer">
+        <h3></h3>
+      </div>
+    </div>
+  </div>
+    
+     
+    <footer class="footerPage">
+      <p>Made with enthusiasm. <br> 
+        &copy; Bars & Dots&reg;, 2020. All rights reserved.</p>
+    </footer>
+  
+    <script type="module" src="indicators.js"></script>
+  </body>
+</html>
