@@ -1,0 +1,412 @@
+@font-face {
+  font-family: font_logo1;
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: font_text1;
+    src: url(../fonts/Cabin_Condensed/CabinCondensed-Regular.ttf);
+  }
+
+html{
+  background-color: #FFFFE7;
+  /*border: 1px solid red;*/
+}
+
+body{
+   /* border: 1px solid blue;*/
+}
+
+div, header, footer, section{
+  /*  border: 1px solid black;*/
+}
+
+.socialNetworks i{
+  margin-top:1em;
+  margin-right: 1em;
+}
+
+.myHeader{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.socialNetworks a{
+  text-decoration: none;
+  color:rgba(23,24,27,1);
+}
+
+.socialNetworks i:hover {
+  color:rgba(23,24,27,0.6);
+}
+
+.logo p{
+ /* border: 1px solid black; */
+  color:rgba(242,193,19,1);
+  font-size: 40px;
+  font-family: font_logo1;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0.5em;
+  padding: 0;
+}
+
+.logo span{
+  color:rgba(27,27,29,1);
+}
+
+.landing{
+  background-color: rgba(236,87,107,1);
+  border-radius: 10px;
+  color: white;
+  height: 40px;
+  width: 120px;
+  border: none;
+  text-align: center;
+  font-family: font_text1;
+  font-size: 20px;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  margin-left: 1em;
+}
+
+.landing:hover{
+  background-color: rgba(236,87,107,0.8);
+  cursor: pointer;
+}
+
+
+.pageMiddle{
+/*border: 1px solid black;*/
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+.pageMiddle div{
+ /* border: 1px solid black;*/
+  
+}
+
+#pageTittle{
+/*border: 1px solid black;*/
+  margin-right: 2em;
+  font-family: font_text1;
+}
+
+#indicatorsCards{
+  transition-timing-function: linear;
+  padding:1em;
+  display: flex;
+  /*flex-direction: row;*/
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+.card {
+  font-family: font_text1;  
+  padding: 15px 10px 15px 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  text-align: center;
+  background-color: rgba(229, 229, 229, 0.5);
+  margin: 1em 1em;
+  transition: 0.5s;
+}
+
+.card a {
+  text-decoration: none;
+  color: rgba(27,27,29,1);
+  transition: 3s;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.4);
+  
+} 
+
+.card-content p{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 17px;
+}
+
+.content p{
+  padding: 0.5em;
+  height: 100px;
+}
+ 
+.share-btn {
+  /*display: inline-block;*/
+  display: flex;
+  justify-content: center;
+  
+  border: none;
+  /*padding: 0.1em 0.6em;
+  outline: none;
+  margin: 0 0.2em;*/
+}
+
+.share-btn a{
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ffffff;
+  width:100%;
+}
+
+
+.share-btn-twitter:hover,
+.share-btn-facebook:hover,
+.share-btn-email:hover{
+  text-decoration: none;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/*
+.share-btn:active {
+  color: #e2e2e2;
+  
+}*/
+
+.share-btn-twitter { background: #55acee; }
+.share-btn-facebook { background: #3B5998; }
+.share-btn-email { background: #444444; }
+
+
+/****************/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 2.5em; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /*overflow: auto;*/ /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  font-family: font_text1;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color:rgba(255,255,231,1);
+  margin: auto;
+  padding: 0;
+ /* border: 1px solid #888;*/
+  width: 60%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4),0 10px 22px 0 rgba(0,0,0,0.25);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 15px;
+
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color:rgba(236,87,107,0.9);
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+}
+
+.modal-body {
+  padding: 15px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color:rgba(236,87,107,0.9);
+  color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#graphicModal{
+ display: flex;
+  justify-content: center;
+  width: 95%;
+  padding-left: 1.5em;
+}
+
+#myChart{
+  width: 400px;
+}
+
+#modalIndicator{
+  font-size: 20px;
+  margin-left: 1em;
+}
+
+.inputContainer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#compare{
+  background-color: rgba(236,87,107,0.9);
+  border-radius: 10px;
+  color: white;
+  height: 40px;
+  width: 120px;
+  border: none;
+  text-align: center;
+  font-family: font_text1;
+  font-size: 20px;
+  margin-right: 1em;
+}
+
+#compare:hover{
+  background-color: rgba(236,87,107,0.8);
+  cursor: pointer;
+}
+
+/****************/
+
+.footerPage{
+  display: flex;
+  justify-content: center;
+  font-family: font_text1;
+ 
+}
+
+.footerPage p{
+  text-align: center;
+  border-top: 1px solid rgba(236,87,107,0.8) ;
+}
+
+@media (max-width: 1100px) {
+  .modal-content{
+     width: 70%;
+   }
+ }
+
+
+@media (max-width: 1000px) {
+ .modal-content{
+    width: 75%;
+  }
+}
+
+@media (max-width: 900px) {
+  .modal-content{
+     width: 80%;
+   }
+ }
+
+@media (max-width: 800px) {
+ .modal-content{
+    width: 85%;
+  }
+}
+
+@media (max-width: 700px) {
+  .modal-content{
+     width: 95%;
+   }
+ }
+
+@media (max-width: 600px) {
+  .myHeader{
+    justify-content: center;
+  }  
+    
+  .socialNetworks{
+      display: flex;
+      color: white; 
+      justify-content: center;
+      margin-right:0;
+      order:-1;
+    }
+
+    .socialNetworks i{ 
+      margin-top:0.5em;
+      margin-right: 0.5em;
+      margin-left: 0.5em;
+    }
+
+    .logo{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .logo p{
+      margin-left: 0em;
+    }
+
+    .pageMiddle div{
+      display: flex;
+      justify-content: center;
+      width:  100%;
+    }
+
+    #pageTittle{
+      margin-right: 0;
+      text-align: center;
+    }
+
+    .modal{
+      padding-top: 4.5em;
+    }
+   
+    .modal-content {
+      width: 100%;
+    } 
+    
+    #modalIndicator{
+      font-size: 17px;
+    }
+
+    #compare{
+      height: 30px;
+      width: 100px;
+    }
+    
+    .modal-header{
+      font-size: 15px;
+    }
+
+    #graphicModal{
+      width: 100%;
+      padding-left: 0em;
+    }
+
+} 
